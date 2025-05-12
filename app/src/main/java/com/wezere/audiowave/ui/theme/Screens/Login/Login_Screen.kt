@@ -17,6 +17,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.wezere.audiowave.models.User
 import com.wezere.audiowave.ui.theme.Navigation.ROUTE_LOGIN
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
@@ -86,4 +89,11 @@ fun LoginScreen(navController: NavHostController) {
             Text("Login", fontSize = 18.sp, fontWeight = FontWeight.Medium)
         }
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun LoginScreenPreview() {
+    val navController = rememberNavController()
+    LoginScreen(navController = navController)
 }
